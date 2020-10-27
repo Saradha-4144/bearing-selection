@@ -1,72 +1,7 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<!-- saved from url=(0074)file:///C:/Users/sarad/OneDrive/Documents/matlab_saradha/html/bearing.html -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      
-   <!--
-This HTML was auto-generated from MATLAB code.
-To make changes, update the MATLAB code and republish this document.
-      --><title>bearing</title><meta name="generator" content="MATLAB 9.6"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2020-10-25"><meta name="DC.source" content="bearing.m"><style type="text/css">
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
-
-html { min-height:100%; margin-bottom:1px; }
-html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
-html body td { vertical-align:top; text-align:left; }
-
-h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
-h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
-h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
-
-a { color:#005fce; text-decoration:none; }
-a:hover { color:#005fce; text-decoration:underline; }
-a:visited { color:#004aa0; text-decoration:none; }
-
-p { padding:0px; margin:0px 0px 20px; }
-img { padding:0px; margin:0px 0px 20px; border:none; }
-p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
-
-ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
-ul li { padding:0px; margin:0px 0px 7px 0px; }
-ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
-ul li ol li { list-style:decimal; }
-ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
-ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
-ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
-ol li ol li { list-style-type:lower-alpha; }
-ol li ul { padding-top:7px; }
-ol li ul li { list-style:square; }
-
-.content { font-size:1.2em; line-height:140%; padding: 20px; }
-
-pre, code { font-size:12px; }
-tt { font-size: 1.2em; }
-pre { margin:0px 0px 20px; }
-pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
-pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
-pre.error { color:red; }
-
-@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
-
-span.keyword { color:#0000FF }
-span.comment { color:#228B22 }
-span.string { color:#A020F0 }
-span.untermstring { color:#B20000 }
-span.syscmd { color:#B28C00 }
-
-.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
-.footer p { margin:0px; }
-.footer a { color:#878787; }
-.footer a:hover { color:#878787; text-decoration:underline; }
-.footer a:visited { color:#878787; }
-
-table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
-table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
-
-
-
-
-
-  </style></head><body><div class="content"><pre class="codeinput"><span class="keyword">function</span> [ratio,P,e,Cval,C0val,Lmr,design,calC]=bearing
-Fr=8000;Fa=3000;X=0.56;Lh=20000;rpm=1200;k=3;<span class="comment">%Based on application choose life of Bearing(L).Commonly substituted as 20K hours here</span>
+</pre><p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB® R2019a</a><br></p></div><!--
+##### SOURCE BEGIN #####
+function [ratio,P,e,Cval,C0val,Lmr,design,calC]=bearing
+Fr=8000;Fa=3000;X=0.56;Lh=20000;rpm=1200;k=3;%Based on application choose life of Bearing(L).Commonly substituted as 20K hours here
 d=75;c=0;count1=0;indi1=0;indi2=0;
 ra=Fa/Fr
 dia=[10;12;15;17;20;25;30;35;40;45;50;55;60;65;70;75;80;85;90;95;100;105;110;120;130;140;150];
@@ -77,98 +12,100 @@ e=[0.22;0.24;0.27;0.31;0.37;0.44];Y=[2;1.8;1.6;1.4;1.2;1];
 sfdia=[17;20;25;30;35;40;45;50;55;60;65;70;75;80;85;90];
 sfC0=[1280;1660;2000;2400;3250;3800;4650;5300;6400;7100;8000;9100;10160;12800;13800;16600];
 sfC=[1800;2400;2825;3350;4300;5000;5850;7000;7850;8450;9150;10000;12000;13000;13800;15200];
-<span class="keyword">for</span> i=1:length(dia) <span class="comment">%matching the dia in 63 series</span>
-    <span class="keyword">if</span>(d==dia(i))
+for i=1:length(dia) %matching the dia in 63 series
+    if(d==dia(i))
         design=i-1
         indi=i;
-        <span class="keyword">break</span>
-     <span class="keyword">else</span>
+        break
+     else
         c = c+1;
-    <span class="keyword">end</span>
-<span class="keyword">end</span>
-<span class="keyword">if</span>(c==length(dia))
-   <span class="keyword">for</span> j=1:length(dia) <span class="comment">%if dia is not found taking the next nearest value</span>
-       <span class="keyword">if</span>(dia(j)&gt;d)
+    end
+end
+if(c==length(dia))
+   for j=1:length(dia) %if dia is not found taking the next nearest value
+       if(dia(j)>d)
            design=i-1
            indi=j;
-           <span class="keyword">break</span>
-       <span class="keyword">end</span>
-   <span class="keyword">end</span>
-<span class="keyword">end</span>
+           break
+       end
+   end
+end
 C0val=C0(indi)*10
 Cval=C(indi)*10
 ratio=round((Fa/C0val),2)
-<span class="keyword">for</span> k=1:length(FaC0)
-    <span class="keyword">if</span>(ratio==FaC0(k))
+for k=1:length(FaC0)
+    if(ratio==FaC0(k))
         indi1=k;
-        <span class="keyword">break</span>
-    <span class="keyword">else</span>
+        break
+    else
         count1=count1+1;
-    <span class="keyword">end</span>
-<span class="keyword">end</span>
-<span class="keyword">if</span>(count1==length(FaC0))
-    <span class="keyword">for</span> i=1:length(FaC0)
-        <span class="keyword">if</span>(FaC0(i)&gt;ratio)
+    end
+end
+if(count1==length(FaC0))
+    for i=1:length(FaC0)
+        if(FaC0(i)>ratio)
             indi1=i;
-            <span class="keyword">break</span>
-        <span class="keyword">end</span>
-    <span class="keyword">end</span>
-<span class="keyword">end</span>
-eval=e(indi1) <span class="comment">%extracting the value of e by comparing with Fa,C0 ratio</span>
+            break
+        end
+    end
+end
+eval=e(indi1) %extracting the value of e by comparing with Fa,C0 ratio
 Yval=Y(indi1)
-P=((X*Fr)+(Yval*Fa))*1<span class="comment">%S is substituted as 1</span>
+P=((X*Fr)+(Yval*Fa))*1%S is substituted as 1
 Lmr=Lh*rpm*60
 l=Lmr/10e5
-calC=P*(l^0.3333) <span class="comment">%L10 is 1 (in denominator)</span>
-<span class="keyword">if</span>(calC&gt;C0val) <span class="comment">%if calculated C value exceeds design data value choose next series and the above code is repeated</span>
-    <span class="keyword">for</span> i=1:length(sfdia) <span class="comment">%matching the dia in 64 series</span>
-    <span class="keyword">if</span>(d==sfdia(i))
+calC=P*(l^0.3333) %L10 is 1 (in denominator)
+if(calC>C0val) %if calculated C value exceeds design data value choose next series and the above code is repeated
+    for i=1:length(sfdia) %matching the dia in 64 series
+    if(d==sfdia(i))
         design=i-1
         indi=i;
-        <span class="keyword">break</span>
-     <span class="keyword">else</span>
+        break
+     else
         c = c+1;
-    <span class="keyword">end</span>
-<span class="keyword">end</span>
-<span class="keyword">if</span>(c==length(sfdia))
-   <span class="keyword">for</span> j=1:length(sfdia) <span class="comment">%if dia is not found taking the next nearest value</span>
-       <span class="keyword">if</span>(sfdia(j)&gt;d)
+    end
+end
+if(c==length(sfdia))
+   for j=1:length(sfdia) %if dia is not found taking the next nearest value
+       if(sfdia(j)>d)
            design=i-1
            indi=j;
-           <span class="keyword">break</span>
-       <span class="keyword">end</span>
-   <span class="keyword">end</span>
-<span class="keyword">end</span>
+           break
+       end
+   end
+end
 C0val=sfC0(indi)*10
 Cval=sfC(indi)*10
 ratio=round((Fa/C0val),2)
-<span class="keyword">for</span> k=1:length(FaC0)
-    <span class="keyword">if</span>(ratio==FaC0(k))
+for k=1:length(FaC0)
+    if(ratio==FaC0(k))
         indi1=k;
-        <span class="keyword">break</span>
-    <span class="keyword">else</span>
+        break
+    else
         count1=count1+1;
-    <span class="keyword">end</span>
-<span class="keyword">end</span>
-<span class="keyword">if</span>(count1==length(FaC0))
-    <span class="keyword">for</span> i=1:length(FaC0)
-        <span class="keyword">if</span>(FaC0(i)&gt;ratio)
+    end
+end
+if(count1==length(FaC0))
+    for i=1:length(FaC0)
+        if(FaC0(i)>ratio)
             indi1=i;
-            <span class="keyword">break</span>
-        <span class="keyword">end</span>
-    <span class="keyword">end</span>
-<span class="keyword">end</span>
-eval=e(indi1) <span class="comment">%extracting the value of e by comparing with Fa,C0 ratio</span>
+            break
+        end
+    end
+end
+eval=e(indi1) %extracting the value of e by comparing with Fa,C0 ratio
 Yval=Y(indi1)
-P=((X*Fr)+(Yval*Fa))*1<span class="comment">%S is substituted as 1</span>
+P=((X*Fr)+(Yval*Fa))*1%S is substituted as 1
 Lmr=Lh*rpm*60
 l=Lmr/10e5
-calC=P*(l^0.3333) <span class="comment">%L10</span>
-<span class="keyword">end</span>
-<span class="comment">%Interpoltion is not done the immediate next value is chosen in all cases</span>
-<span class="comment">% this method can be employed to design the bearing if dia,radial force,speed and thrust force are given.</span>
-<span class="comment">% after 56 th line the above code is repeated with change in variables.</span>
-</pre><pre class="codeoutput">ra =
+calC=P*(l^0.3333) %L10
+end
+%Interpoltion is not done the immediate next value is chosen in all cases
+% this method can be employed to design the bearing if dia,radial force,speed and thrust force are given.
+% after 56 th line the above code is repeated with change in variables.
+
+OUTPUT:
+ra =
 
     0.3750
 
@@ -277,114 +214,3 @@ ans =
 
     0.0300
 
-</pre><p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB® R2019a</a><br></p></div><!--
-##### SOURCE BEGIN #####
-function [ratio,P,e,Cval,C0val,Lmr,design,calC]=bearing
-Fr=8000;Fa=3000;X=0.56;Lh=20000;rpm=1200;k=3;%Based on application choose life of Bearing(L).Commonly substituted as 20K hours here
-d=75;c=0;count1=0;indi1=0;indi2=0;
-ra=Fa/Fr
-dia=[10;12;15;17;20;25;30;35;40;45;50;55;60;65;70;75;80;85;90;95;100;105;110;120;130;140;150];
-C0=[360;430;520;630;765;1040;1460;1760;2200;3000;3550;4250;4800;5500;6300;7200;8000;8800;9800;11200;13200;14300;16600;17000;19600;22400;25500];
-C=[630;765;880;1060;1250;1660;2200;2600;3200;4150;4800;5600;6400;7200;8150;9000;9650;10400;11200;12000;13700;14300;16600;16300;18000;20000;21600];
-FaC0=[0.025;0.04;0.07;0.13;0.25;0.5];
-e=[0.22;0.24;0.27;0.31;0.37;0.44];Y=[2;1.8;1.6;1.4;1.2;1];
-sfdia=[17;20;25;30;35;40;45;50;55;60;65;70;75;80;85;90];
-sfC0=[1280;1660;2000;2400;3250;3800;4650;5300;6400;7100;8000;9100;10160;12800;13800;16600];
-sfC=[1800;2400;2825;3350;4300;5000;5850;7000;7850;8450;9150;10000;12000;13000;13800;15200];
-for i=1:length(dia) %matching the dia in 63 series
-    if(d==dia(i))
-        design=i-1
-        indi=i;
-        break
-     else
-        c = c+1;
-    end
-end
-if(c==length(dia))
-   for j=1:length(dia) %if dia is not found taking the next nearest value
-       if(dia(j)>d)
-           design=i-1
-           indi=j;
-           break
-       end
-   end
-end
-C0val=C0(indi)*10
-Cval=C(indi)*10
-ratio=round((Fa/C0val),2)
-for k=1:length(FaC0)
-    if(ratio==FaC0(k))
-        indi1=k;
-        break
-    else
-        count1=count1+1;
-    end
-end
-if(count1==length(FaC0))
-    for i=1:length(FaC0)
-        if(FaC0(i)>ratio)
-            indi1=i;
-            break
-        end
-    end
-end
-eval=e(indi1) %extracting the value of e by comparing with Fa,C0 ratio
-Yval=Y(indi1)
-P=((X*Fr)+(Yval*Fa))*1%S is substituted as 1
-Lmr=Lh*rpm*60
-l=Lmr/10e5
-calC=P*(l^0.3333) %L10 is 1 (in denominator)
-if(calC>C0val) %if calculated C value exceeds design data value choose next series and the above code is repeated
-    for i=1:length(sfdia) %matching the dia in 64 series
-    if(d==sfdia(i))
-        design=i-1
-        indi=i;
-        break
-     else
-        c = c+1;
-    end
-end
-if(c==length(sfdia))
-   for j=1:length(sfdia) %if dia is not found taking the next nearest value
-       if(sfdia(j)>d)
-           design=i-1
-           indi=j;
-           break
-       end
-   end
-end
-C0val=sfC0(indi)*10
-Cval=sfC(indi)*10
-ratio=round((Fa/C0val),2)
-for k=1:length(FaC0)
-    if(ratio==FaC0(k))
-        indi1=k;
-        break
-    else
-        count1=count1+1;
-    end
-end
-if(count1==length(FaC0))
-    for i=1:length(FaC0)
-        if(FaC0(i)>ratio)
-            indi1=i;
-            break
-        end
-    end
-end
-eval=e(indi1) %extracting the value of e by comparing with Fa,C0 ratio
-Yval=Y(indi1)
-P=((X*Fr)+(Yval*Fa))*1%S is substituted as 1
-Lmr=Lh*rpm*60
-l=Lmr/10e5
-calC=P*(l^0.3333) %L10
-end
-%Interpoltion is not done the immediate next value is chosen in all cases
-% this method can be employed to design the bearing if dia,radial force,speed and thrust force are given.
-% after 56 th line the above code is repeated with change in variables.
-
-
-    
-
-##### SOURCE END #####
---></body></html>
